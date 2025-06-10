@@ -1,0 +1,29 @@
+{
+  "name": "my-hello-app",
+  "version": "1.0.0",
+  "description": "一个简单的uni-app示例项目",
+  "main": "main.js",
+  "scripts": {
+    "dev:h5": "echo '启动模拟H5开发服务器...' && http-server . -p 8081 -o",
+    "serve": "npm run dev:h5",
+    "dev": "npm run dev:h5",
+    "build:h5": "npm run create:dist && echo '构建完成！生成文件位于 dist/h5 目录'",
+    "build": "npm run build:h5",
+    "create:dist": "mkdir dist 2>nul & mkdir dist\\h5 2>nul & copy index.html dist\\h5\\ & xcopy pages dist\\h5\\pages\\ /E /I /Y & echo 已复制主要文件到dist/h5目录",
+    "dev:mp-weixin": "echo '小程序开发请使用HBuilderX'",
+    "preview": "http-server . -p 8080 -o",
+    "preview:build": "http-server dist/h5 -p 8082 -o",
+    "hbuilder": "echo '下载HBuilderX: https://www.dcloud.io/hbuilderx.html'",
+    "help": "echo '可用命令: dev:h5(H5预览), build:h5(构建H5), build(构建), preview:build(预览构建结果), hbuilder(获取HBuilderX)'"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "browserslist": [
+    "Android >= 4.4",
+    "ios >= 9"
+  ]
+} 
