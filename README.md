@@ -54,4 +54,4 @@ npm run help       # 查看命令说明
 
 
 ## License
-Apache License 2.0
+CC BY-NC 4.0 ---updated
